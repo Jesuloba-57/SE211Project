@@ -12,9 +12,7 @@ auth = Flask(__name__)
 def login():
     if request.method == 'POST':
         email = request.form.get('email')
-        print(email)
         password = request.form.get('password1')
-        print(password)
         db = login_table()
         db.log_in(email, password)
 
@@ -68,7 +66,7 @@ def sign_up():
 @auth.route("/")
 @auth.route('/landing')
 def landing():
-    return render_template('products.html')
+    return render_template('login.html')
 
 @auth.route('/product')
 def product():

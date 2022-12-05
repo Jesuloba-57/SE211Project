@@ -34,6 +34,14 @@ class login_table:
             print("Failed to insert record into Laptop table {}".format(error))
     
     def log_in(self, email, passwd):
-        sql = "SELECT user_id FROM login_table WHERE email = $ AND passwd = $"
-        self.data
-        pass
+        try:
+            mycursor = self.data.cursor()
+            record = "placeholder"
+            sql = "SELECT user_id FROM login_table WHERE email = %s AND passwd = %s"
+            mycursor.execute(sql, (email, passwd))
+            record = mycursor.fetchall()
+            print(record)
+            print("done")
+        except mysql.connector.Error as error:
+            print("Failed to get record from MySQL table: {}".format(error))
+

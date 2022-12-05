@@ -73,7 +73,7 @@ def sign_up():
 @auth.route("/")
 @auth.route('/landing')
 def landing():
-    return render_template('login.html')
+    return render_template('cart.html')
 
 @auth.route('/product')
 def product():

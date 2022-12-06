@@ -7,17 +7,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 
 </head>
+<h2 class="fmessage">
+	{% for message in get_flashed_messages() %}
+		{{ message }}
+	{% endfor %}
+</h2>
 <body>
+	
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 			<div class="login">
 				<form method="POST" action="">
 					<label for="chk" aria-hidden="true">Login</label>
                     <input type="email" name="email" placeholder="Email" required="">
-                    <input type="password" name="passswd" placeholder="Password" required="">
+                    <input type="password" name="password1" placeholder="Password" required="">
                     <button>Login</button>
-                    <p class="sublink">Don't have an Account yet? <a href="/signup">Here</a><p>
 				</form>
+				<p class="sublink">Don't have an Account yet? <a href="/signup">Here</a><p>
 			</div>
 	</div>
 </body>

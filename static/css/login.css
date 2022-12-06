@@ -9,6 +9,10 @@ body {
     background: linear-gradient(to top, #ffffff, #ff523b, #f3460c);
 }
 
+.fmessage{
+    text-align: center;
+}
+
 .main {
     width: 350px;
     height: 650px;

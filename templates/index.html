@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Canes Store | E-commerce Website Design</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <link href="https://fonts.googleapis.com/css2?
         family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600;
         1,700&display=swap" rel="stylesheet">
@@ -19,16 +19,22 @@
             <div class="container"> 
                 <div class="navbar">
                     <div class="logo">
-                        <img src="image/canesImage.png" width="100px">
+                        <img src="static/images/canesImage.png" width="100px">
                     </div>
+                    <h2>
+                        <center>{{ message }}<center>
+                    </h2>
                     <nav>
                         <ul id="MenuItems">
                             <li><a href="">HOME</a></li>
-                            <li><a href="login.html">LOGIN</a></li>
-                            <li><a href="products.html">PRODUCTS</a></li>
-                            <li><a href="cart.html">CART</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <li><a href="account.html">ACCOUNT</a></li>
+                            <li><a href="/login">LOGIN</a></li>
+                            <li><a href="/about">ABOUT</a></li>
+                            <!-- <li><a href="/templates/product.html">PRODUCTS</a></li> -->
+                            {% if current_user.is_authenticated %}
+                            <li><a href="/cart">CART</a></li>
+                            <li><a href="/account">ACCOUNT</a></li>
+                            <li><a href="/logout"></a></li>
+                            {% endif %}
                         </ul>
                     </nav>
                     <!--<<img src="" width="30px" height="30px">
@@ -41,7 +47,7 @@
                         <a href="products.html" class="btn">Explore Now &#8594;</a>
                     </div>
                     <div class="col-2">
-                        <img src="image/webImage.jpeg">
+                        <img src="/static/images/webImage.jpeg">
                     </div>
                 </div>
             </div>
@@ -52,13 +58,13 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-3">
-                        <img src="image/shirt2.avif">
+                        <img src="/static/images/shirt2.avif">
                     </div>
                     <div class="col-3">
-                        <img src="image/jean7.jpg">
+                        <img src="/static/images/jean7.jpg">
                     </div>
                     <div class="col-3">
-                        <img src="image/laptop1.webp">
+                        <img src="/static/images/laptop1.webp">
                     </div>
                 </div>
             </div>
@@ -68,7 +74,7 @@
             <h2 class="title">Featured Products</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="image/red1.jpg" alt="">
+                    <img src="/static/images/red1.jpg" alt="">
                     <h4>Red Printed T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -80,7 +86,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/red2.jpg" alt="">
+                    <img src="/static/images/red2.jpg" alt="">
                     <h4>Red long-sleeve Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -92,7 +98,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/white1.avif" alt="">
+                    <img src="/static/images/white1.avif" alt="">
                     <h4>White T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -104,7 +110,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/white2.avif" alt="" width="50%">
+                    <img src="/static/images/white2.avif" alt="" width="50%">
                     <h4>White T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -119,7 +125,7 @@
             <h2 class="title">Latest Products Review</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="image/white3.avif" alt="">
+                    <img src="/static/images/white3.avif" alt="">
                     <h4>White Printed T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -131,7 +137,7 @@
                     <p>$25.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe7.jpg" alt="">
+                    <img src="/static/images/shoe7.jpg" alt="">
                     <h4>Boy's shoe (light blue)</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -143,7 +149,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe1.jpg" alt="">
+                    <img src="/static/images/shoe1.jpg" alt="">
                     <h4>men's shoe (brown)</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -155,7 +161,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe6.jpg" alt="">
+                    <img src="/static/images/shoe6.jpg" alt="">
                     <h4>Yellow high heels</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -173,7 +179,7 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="image/smartband.png" class="offer-img">
+                        <img src="/static/images/smartband.png" class="offer-img">
                     </div>
                     <div class="col-2">
                         <p>Exclusively available on Canes Store</p>
@@ -219,7 +225,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
                         </div>
-                        <img src="image/lady1.avif">
+                        <img src="/static/images/lady1.avif">
                         <h3>Mabel Ann</h3> 
                     </div>
 
@@ -235,7 +241,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
                         </div>
-                        <img src="image/guy1.avif">
+                        <img src="/static/images/guy1.avif">
                         <h3>Joe Rez</h3> 
                     </div>
                 </div>
@@ -247,19 +253,19 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-5">
-                    <img src="image/nike.webp">
+                    <img src="/static/images/nike.webp">
                 </div>
                 <div class="col-5">
-                    <img src="image/adidas.png">
+                    <img src="/static/images/adidas.png">
                 </div>
                 <div class="col-5">
-                    <img src="image/puma.jpg">
+                    <img src="/static/images//puma.jpg">
                 </div>
                 <div class="col-5">
-                    <img src="image/apple.png">
+                    <img src="/static/images/apple.png">
                 </div>
                 <div class="col-5">
-                    <img src="image/hp.png">
+                    <img src="/static/images/hp.png">
                 </div>
             </div>
         </div>
@@ -303,7 +309,7 @@
 
       <div class="w3-col s4 w3-justify">
         <h4>Store</h4>
-        <p><i class="fa fa-fw fa-map-marker"></i> Canes Store</p>
+        <p><i class="fa fa-fw fa-map-marker"></i> Online MarketPlace</p>
         <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
         <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
         <h4>We accept</h4>

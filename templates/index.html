@@ -14,6 +14,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <h3>
+        {% for m in message %}
+            {{ message }}
+        {% endfor %}
+    </h3>
     <body>
         <div class="header">
             <div class="container"> 
@@ -26,9 +31,10 @@
                         <ul id="MenuItems">
                             <li><a href="">HOME</a></li>
                             <li><a href="/login">LOGIN</a></li>
-                            <li><a href="/cart">CART</a></li>
                             <li><a href="/about">ABOUT</a></li>
-                            <li><a href="/account">ACCOUNT</a></li>
+                            {% if current_user.is_authenticated %}
+                                <li><a href="/cart">CART</a></li>
+                            {% endif %}
                             <li><a href="/seller">SELLERS</a></li>
                         </ul>
                     </nav>

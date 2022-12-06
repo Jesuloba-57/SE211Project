@@ -54,7 +54,11 @@ def login():
 def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
-        print(email)
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash('Email Already Exists.', category='error')
+            return render_template('signup.html')
+
         fname = request.form.get('fname')
         lname = request.form.get('lname')
         password1 = str(request.form.get('password1'))
@@ -63,8 +67,6 @@ def sign_up():
 
         if len(email) < 4:
             flash('Email must be greater than 3 characters.', category='error')
-        elif len(user_name) < 2:
-            flash('Username must be greater than 1 character.', category='error')
         elif password1 != password2:
             flash('Passwords don\'t match.', category='error')
         else:

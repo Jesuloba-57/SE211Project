@@ -55,7 +55,6 @@ def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
         print(email)
-        user_name = request.form.get('username')
         fname = request.form.get('fname')
         lname = request.form.get('lname')
         password1 = str(request.form.get('password1'))
@@ -69,8 +68,7 @@ def sign_up():
         elif password1 != password2:
             flash('Passwords don\'t match.', category='error')
         else:
-            new_user = User(id=uid, email=email, user_name=user_name, 
-                            password=generate_password_hash(password1, method='pbkdf2:sha1', salt_length=8))
+            new_user = User(id=uid, email=email, password=generate_password_hash(password1, method='pbkdf2:sha1', salt_length=8))
             db.session.add(new_user)
             login_user(new_user, remember=True)
             flash('Account created!', category='success')

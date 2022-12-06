@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Canes Store | E-commerce Website Design</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <link href="https://fonts.googleapis.com/css2?
-        family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600;
+        family=Open+Sans:ital,weight@1,300;1,400;1,500;1,600;
         1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/
-        @fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+        @fontawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -19,16 +19,17 @@
             <div class="container"> 
                 <div class="navbar">
                     <div class="logo">
-                        <img src="image/canesImage.png" width="100px">
+                        <img src="/static/images/canesImage.png" width="100px">
                     </div>
                     <nav>
+                        <input class="search" type="text" placeholder="Search...">
                         <ul id="MenuItems">
                             <li><a href="">HOME</a></li>
-                            <li><a href="login.html">LOGIN</a></li>
-                            <li><a href="cart.html">CART</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <li><a href="account.html">ACCOUNT</a></li>
-                            <li><a href="seller.html">SELLERS</a></li>
+                            <li><a href="/login">LOGIN</a></li>
+                            <li><a href="/cart">CART</a></li>
+                            <li><a href="/about">ABOUT</a></li>
+                            <li><a href="/account">ACCOUNT</a></li>
+                            <li><a href="/seller">SELLERS</a></li>
                         </ul>
                     </nav>
                     <!--<<img src="" width="30px" height="30px">
@@ -38,10 +39,10 @@
                     <div class="col-2">
                         <h1>Give your Choice <br>an efficient Product!</h1>
                         <p>Canes Store offer every product you desire for your maximum satisfaction</p>
-                        <a href="products.html" class="btn">Explore Now &#8594;</a>
+                        <!-- <a href="products.html" class="btn">Explore Now &#8594;</a> -->
                     </div>
                     <div class="col-2">
-                        <img src="image/webImage.jpeg">
+                        <img src="/static/images/webImage.jpeg">
                     </div>
                 </div>
             </div>
@@ -52,13 +53,13 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-3">
-                        <img src="image/shirt2.avif">
+                        <img src="/static/images/shoe1.jpg">
                     </div>
                     <div class="col-3">
-                        <img src="image/jean7.jpg">
+                        <img src="/static/images/jean7.jpg">
                     </div>
                     <div class="col-3">
-                        <img src="image/laptop1.webp">
+                        <img src="/static/images/laptop1.webp">
                     </div>
                 </div>
             </div>
@@ -68,7 +69,7 @@
             <h2 class="title">Featured Products</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="image/red1.jpg" alt="">
+                    <img src="/static/images/red1.jpg" alt="">
                     <h4>Red Printed T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -80,7 +81,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/red2.jpg" alt="">
+                    <img src="/static/images/red2.jpg" alt="">
                     <h4>Red long-sleeve Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -92,7 +93,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/white1.avif" alt="">
+                    <img src="/static/images/WHITE TSHIRTS 140622 default-land-GettyImages-1398817154.jpg.webp" alt="">
                     <h4>White T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -104,7 +105,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/white2.avif" alt="" width="50%">
+                    <img src="/static/images/images.jpeg" alt="" width="50%">
                     <h4>White T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -119,7 +120,7 @@
             <h2 class="title">Latest Products Review</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="image/white3.avif" alt="">
+                    <img src="/static/images/images-1.jpeg" alt="">
                     <h4>White Printed T-Shirt</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -131,7 +132,7 @@
                     <p>$25.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe7.jpg" alt="">
+                    <img src="/static/images/shoe7.jpg" alt="">
                     <h4>Boy's shoe (light blue)</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -143,7 +144,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe1.jpg" alt="">
+                    <img src="/static/images/shoe1.jpg" alt="">
                     <h4>men's shoe (brown)</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -155,7 +156,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="image/shoe6.jpg" alt="">
+                    <img src="/static/images/shoe6.jpg" alt="">
                     <h4>Yellow high heels</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -173,16 +174,16 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="image/smartband.png" class="offer-img">
+                        <img src="/static/images/smartband.png" class="offer-img">
                     </div>
                     <div class="col-2">
                         <p>Exclusively available on Canes Store</p>
                         <h1>Smart Band 4</h1>
                         <small> the Mi Smart band features a 39.9% larger 
-                            (than Mi Band 3) AMOLED colr full-touch display with 
+                            (than Mi Band 3) AMOLED color full-touch display with 
                             adjustable brightness, so everything is clear as it can 
                             be.</small>
-                            <a href="cart.html" class="btn">Buy Now &#8594;</a>
+                            <a href="/cart" class="btn">Buy Now &#8594;</a>
                     </div>
                 </div>
             </div>
@@ -203,14 +204,14 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
                         </div>
-                        <img src="image/guy2.avif">
+                        <img src="/static/images/guy2.avif">
                         <h3>Sean Parker</h3> 
                     </div>
 
                     <div class="col-3">
                         <i class="fa fa-quote-left"></i>
                         <p>Canes Store is a really nice store which is
-                            fast and relaible when it comes to delivery of products.
+                            fast and reliable when it comes to delivery of products.
                         </p>
                         <div class="rating">
                             <i class="fa fa-star"></i>
@@ -219,7 +220,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
                         </div>
-                        <img src="image/lady1.avif">
+                        <img src="/static/images/lady1.avif">
                         <h3>Mabel Ann</h3> 
                     </div>
 
@@ -235,7 +236,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
                         </div>
-                        <img src="image/guy1.avif">
+                        <img src="/static/images/guy1.avif">
                         <h3>Joe Rez</h3> 
                     </div>
                 </div>
@@ -247,19 +248,19 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-5">
-                    <img src="image/nike.webp">
+                    <img src="/static/images/nike.webp">
                 </div>
                 <div class="col-5">
-                    <img src="image/adidas.png">
+                    <img src="/static/images/adidas.png">
                 </div>
                 <div class="col-5">
-                    <img src="image/puma.jpg">
+                    <img src="/static/images/puma.jpg">
                 </div>
                 <div class="col-5">
-                    <img src="image/apple.png">
+                    <img src="/static/images/apple.png">
                 </div>
                 <div class="col-5">
-                    <img src="image/hp.png">
+                    <img src="/static/images/hp.png">
                 </div>
             </div>
         </div>

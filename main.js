@@ -36,7 +36,7 @@ function ready(){
 
     // Quantity Changes
     var quantityInputs = document.getElementsByClassName('cart-quantity');
-    for (var i = 0; i < rquantityInputs.length; i++)
+    for (var i = 0; i < quantityInputs.length; i++)
     {
         var input = quantityInputs[i];
         input.addEventListener('change', quantityChanged);

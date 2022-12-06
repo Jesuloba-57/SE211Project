@@ -16,3 +16,7 @@ def about():
 @views.route("/cart")
 def cart():
     return render_template('cart.html')
+
+@views.route("/seller")
+def seller():
+    return render_template('seller.html')

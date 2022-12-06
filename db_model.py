@@ -13,5 +13,5 @@ from sqlalchemy.sql import func
 class User(db.Model, UserMixin):
     id = db.Column(db.String(15), nullable=False, primary_key=True)
     email = db.Column(db.String(150), nullable=False, unique=True)
-    user_name = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.String(150), nullable=False)
+    status = db.Column(db.Boolean, default=1)

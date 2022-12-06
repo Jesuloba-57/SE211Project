@@ -24,10 +24,11 @@ else
 }
 
 // Making Function 
-function ready(){
+function ready()
+{
     // Remove Items From cart
     var removeCartButtons = document.getElementsByClassName('cart-remove');
-    console.log(removeCartButtons);
+    //console.log(removeCartButtons);
     for (var i = 0; i < removeCartButtons.length; i++)
     {
         var button = removeCartButtons[i];
@@ -56,7 +57,8 @@ function ready(){
 
 
 //Buy Button
-function buyButtonClicked(){
+function buyButtonClicked()
+{
     alert('Your Order is placed');
     var cartContent = document.getElementsByClassName('cart-content')[0];
     while (cartContent.hasChildNodes())
@@ -105,32 +107,35 @@ function addProductToCart(title, price, productImg)
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
     for (var i = 0; i < cartItemsNames.length; i++)
     {
-        alert("You have already added this item to your cart");
-        return;
+        if (cartItemsNames[i].innerText == title)
+        {
+            alert("You have already added this item to your cart");
+            return;
+        }
     }
     
+    //check this line
+    var cartBoxContent = `
+                            <img src="${productImg}" alt="" class="cart-img">
+                            <div class="detail-box">
+                                <div class="cart-product-title">${title}</div>
+                                <div class="cart-price">${price}</div>
+                                <input type="number" value="1" class="cart-quantity">
+                            </div>
+                            <!--remove cart-->
+                            <i class='bx bx-trash cart-remove'></i>`
+
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+    cartShopBox
+        .getElementsByClassName('cart-remove')[0]
+        .addEventListener('click', removeCartItem);
+    cartShopBox
+        .getElementsByClassName('cart-quantity')[0]
+        .addEventListener('change', quantityChanged);
 }
 
-//check this line
-var cartBoxContent = ```
-                        <img src="${productImg}" alt="" class="cart-img">
-                        <div class="detail-box">
-                            <div class="cart-product-title">${title}</div>
-                            <div class="cart-price">${price}</div>
-                            <input type="number" value="1" class="cart-quantity">
-                        </div>
-                        <!--remove cart-->
-                        <i class='bx bx-trash cart-remove'></i>```
 
-cartShopBox.innerHTML = cartBoxContent;
-cartItems.append(cartShopBox);
-cartShopBox
-    .getElementsByClassName('cart-remove')[0]
-    .addEventListener('click', removeCartItem);
-cartShopBox
-    .getElementsByClassName('cart-quantity')[0]
-    .addEventListener('change', quantityChanged);
-    
 // Update Total
 function updatetotal()
 {
@@ -144,7 +149,7 @@ function updatetotal()
         var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
         var price = parseFloat(priceElement.innerText.replace("$",""));
         var quantity = quantityElement.value;
-        total = total + (price * quantity);
+        total = total + price * quantity;
     }
         // if price contain same Cents Value
         total = Math.round(total *100 / 100); 
